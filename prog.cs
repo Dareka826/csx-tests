@@ -7,8 +7,12 @@ static class MainClass {
 
         using (var client = new HttpClient()) {
             var uri = new Uri("https://ddg.gg/lite");
+            var response = client.GetAsync(uri).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
 
-            ReflectDump.DumpType(uri.GetType());
+            Console.WriteLine(result);
+            //ReflectDump.DumpMethods(x.GetType());
+            //ReflectDump.DumpProperties(x.GetType());
         }
     }
 }
