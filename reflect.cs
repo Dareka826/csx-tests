@@ -15,4 +15,12 @@ static class ReflectDump {
             Console.WriteLine(" }");
         }
     }
+
+    public static void DumpProperties(Type t) {
+        var props_data = t.GetProperties();
+
+        foreach (var prop in props_data) {
+            Console.WriteLine($"{prop.Name} : {prop.PropertyType}");
+        }
+    }
 }
