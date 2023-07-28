@@ -2,7 +2,7 @@ using System.Reflection;
 using System;
 
 static class ReflectDump {
-    public static void DumpType(Type t) {
+    public static void DumpMethods(Type t) {
         var methods_data = t.GetMethods();
         foreach (var method_info in methods_data) {
             Console.Write($"{method_info.Name} -> {method_info.ReturnType} : {{");
