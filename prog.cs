@@ -4,8 +4,7 @@ using System.Net.Http;
 static class MainClass {
     public static void Main(string[] args) {
         using (var client = new HttpClient()) {
-            var uri = new Uri("https://ddg.gg/lite");
-            var response = client.GetAsync(uri).Result;
+            var response = client.GetAsync("https://ddg.gg/lite").Result;
             var result = response.Content.ReadAsStringAsync().Result;
 
             Console.WriteLine(result);
