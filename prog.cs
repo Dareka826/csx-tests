@@ -7,6 +7,8 @@ static class MainClass {
 
         using (var client = new HttpClient()) {
             var uri = new Uri("https://ddg.gg/lite");
+
+            ReflectDump.DumpType(uri.GetType());
         }
     }
 }
