@@ -6,4 +6,4 @@ csi script.csx
 
 # Why?
 
-Because OmniSharp doesn't work on Termux and boredom.
+I was bored.
